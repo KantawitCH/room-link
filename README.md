@@ -1,78 +1,140 @@
-# Project Overview
+# **RoomLink**
 
-#### **1. Objectives**
+## **Project Overview**
 
-- **Primary Objective**:  
-    Build a booking platform web application that enables users to search properties, view details, make bookings, and process payments.
+This project is a full-stack web application designed as a booking platform for users to:
+
+- Search properties using various filters.
+- View detailed property information.
+- Make bookings with availability checks.
+- Process payments through mock or real gateways.
+
+---
+
+## **Objectives**
+
+#### **Primary Objective**
+
+Build a scalable web application that provides core booking functionality, including property search, booking management, and payment processing.
+
+#### **Personal Development Objectives**
+
+- Gain hands-on experience with:
+    - **Backend**: Spring Boot for RESTful APIs and business logic.
+    - **Frontend**: React for interactive user interfaces.
+    - **Search**: Elasticsearch for efficient and fast search capabilities.
+    - **Database**: PostgreSQL for relational data storage.
+- Design and implement scalable system and database architectures.
+- Solve real-world challenges like search optimization, API integration, and deployment.
+
+---
+
+## **Scope**
+
+### **Core Features**
+
+- User authentication (sign-up, login, logout).
+- Property search with filters (location, price, ratings).
+- Property details page with images, descriptions, pricing, and reviews.
+- Booking system with availability checks and confirmation.
+- Payment processing (mock implementation or real gateway integration).
+
+### **Out of Scope (Initial Phase)**
+
+- Multi-language support.
+- Advanced features like dynamic pricing and promotions.
+
+---
+
+## **How to Run the Project**
+
+1. **Clone the repository**:
     
-- **Personal Development Objectives**:
+    ```
+    git clone https://github.com/yourusername/booking-platform.git cd room-link
+    ```
     
-    - Gain in-depth experience with a modern tech stack, including:
-        - **Backend**: Spring Boot for building scalable, RESTful APIs and implementing business logic.
-        - **Frontend**: React for creating an interactive, user-friendly interface.
-        - **Search**: Elasticsearch for implementing fast, efficient search functionality.
-        - **Database**: PostgreSQL for designing and managing relational data storage.
-        - Explore and integrate additional technologies as the project evolves.
-    - Develop skills in designing scalable system and database architectures.
-    - Learn to tackle real-world challenges, including search optimization, API integration, and deployment.
-#### **2. Scope**
-
-- **Core Features**:
+2. **Set up the backend**:
     
-    1. User authentication (sign-up, login, logout).
-    2. Property search with filters (location, price, ratings).
-    3. Property details page with images, descriptions, pricing, and reviews.
-    4. Booking system with availability checks and confirmation.
-    5. Payment processing (mock implementation or integration with a payment gateway).
-- **Out of Scope** (initial phase):
+    - Install dependencies.
+    - Configure database settings in `application.yml`.
+    - Start the Spring Boot server.
+3. **Set up the frontend**:
     
-    - Multi-language support.
-    - Advanced features like dynamic pricing and promotions.
+    - Navigate to the frontend folder.
+    - Install dependencies:
+        
+        ```
+        npm install
+        ```
+        
+    - Start the React app:
+        
+        ```
+        npm start
+        ```
+4. **Start Elasticsearch**:
+    
+    - Make sure Elasticsearch is running locally or via Docker.
+5. **Run the application**:
+    
+    - Open ```http://localhost:3000``` in your browser to access the application.
+---
 
-#### **3. Functional Requirements** -- Subject to change
+## **Functional Requirements**
 
-- **User Authentication**:  
-    Secure sign-up, login, and logout functionalities with hashed passwords.
-- **Property Search**:
-    - Full-text search using Elasticsearch.
-    - Filter results by price range, location, and ratings.
-- **Booking System**:
-    - Users can select dates and confirm bookings.
-    - Ensure no double-booking of the same property.
-- **Admin Panel**:
-    - Manage properties, bookings, and user accounts.
-- **Payment**:  
-    Process mock payments or integrate with a real gateway (Stripe/PayPal).
+> _Note: These are subject to change as development progresses._
 
-#### **4. Non-Functional Requirements** -- Subject to change
+- **User Authentication**: Secure sign-up, login, and logout functionalities using hashed passwords.
+- **Property Search**: Full-text search using Elasticsearch with filters for price range, location, and ratings.
+- **Booking System**: Enable date-based bookings with double-booking prevention.
+- **Admin Panel**: Tools for managing properties, bookings, and user accounts.
+- **Payment**: Mock payment processing or integration with gateways like Stripe/PayPal.
 
-- **Performance**:
-    - Search results should load within 2 seconds.
-    - Support up to 100 simultaneous users in the initial phase.
-- **Scalability**:
-    - Design for future scalability to handle 1,000+ users.
-- **Security**:
-    - Implement JWT for session management.
-    - Secure APIs and sanitize inputs to prevent SQL injection and XSS.
+---
 
-#### **5. Milestones**
+## **Non-Functional Requirements**
 
-1. **Setup**:
-    - Set up backend, frontend, and database environments.
+> _Note: These are subject to change as development progresses._
+
+- **Performance**: Search results load within 2 seconds; supports up to 100 users initially.
+- **Scalability**: Design supports future scaling for 1,000+ users.
+- **Security**: Implement JWT for session management; secure APIs to prevent SQL injection and XSS.
+
+---
+
+## **Milestones**
+
+1. **Setup**: Initialize backend, frontend, and database environments.
 2. **Core Features**:
-    - Implement user authentication.
-    - Build search functionality with Elasticsearch and PostgreSQL.
-3. **Booking System**:
-    - Develop booking logic and date availability checks.
-4. **Payment Integration**:
-    - Add mock payment system or integrate a real payment gateway.
-5. **Admin Panel**:
-    - Develop management tools for properties and bookings.
-6. **Deployment**:
-    - Dockerize the application and deploy to a cloud platform.
+    - User authentication.
+    - Search functionality with Elasticsearch and PostgreSQL.
+3. **Booking System**: Implement booking logic with date availability checks.
+4. **Payment Integration**: Add mock payment or integrate a real payment gateway.
+5. **Admin Panel**: Build tools to manage properties and bookings.
+6. **Deployment**: Dockerize and deploy the application to a cloud platform.
 
-#### **6. Mock Data**
+---
+
+## **Mock Data**
 
 - **Users**: Predefined users with basic profile information.
-- **Properties**: Sample properties with various attributes (name, location, price, images).
-- **Bookings**: Sample booking records for testing.
+- **Properties**: Sample properties with attributes like name, location, price, and images.
+- **Bookings**: Example booking records for testing and demonstration purposes.
+
+---
+
+## **Technologies Used**
+
+- **Frontend**: React
+- **Backend**: Spring Boot
+- **Search**: Elasticsearch
+- **Database**: PostgreSQL
+- **Containerization**: Docker
+- **Others**: To be added as the project evolves.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! Feel free to submit issues or pull requests for suggestions, improvements, or bug fixes.
